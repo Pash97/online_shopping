@@ -21,7 +21,7 @@
 	<script>window.menu='${title}';</script>
     <!-- Bootstrap core CSS -->
     <link href="${css}/bootstrap.min.css" rel="stylesheet">
-    <link href="${css}/bootstrap-theam.css" rel="stylesheet">
+    <link href="${css}/bootstrap-theme-style.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="${css}/myapp.css" rel="stylesheet">
@@ -43,6 +43,9 @@
 	</c:if>
 	<c:if test="${userClickContact==true }">
 			<%@include file="contact.jsp" %>
+	</c:if>
+	<c:if test="${userClickAllProducts==true or userClickCategoryProducts==true }">
+			<%@include file="listProducts.jsp" %>
 	</c:if>
     </div>
       <!-- /.row -->
