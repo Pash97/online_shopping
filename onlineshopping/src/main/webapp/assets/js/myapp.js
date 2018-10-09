@@ -12,10 +12,9 @@ $(function(){
 				$('#products').addClass('active');
 				break;
 		default:
+				if(menu=="Home") break;
 				$("#products").addClass('active');
 				$("#a_"+menu).addClass('active');
 				break;
-				
 	}
-		
 });
