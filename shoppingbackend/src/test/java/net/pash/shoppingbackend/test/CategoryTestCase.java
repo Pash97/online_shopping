@@ -25,7 +25,7 @@ public class CategoryTestCase {
 		categoryDAO = (CategoryDAO)context.getBean("categoryDAO");
 	}
 	
-/*@Test
+@Test
 	public void testAddCategory()
 	{
 		category = new Category();
@@ -34,32 +34,27 @@ public class CategoryTestCase {
 		category.setImageURL("CAT_04.jpg");
 		assertEquals("Successfully added a category inside the table..!",true,categoryDAO.add(category));
 		
-	}*/
-	/*@Test
+	}
+	@Test
 	public void testGetCategory()
 	{
 		category = categoryDAO.get(3);
 		assertEquals("Successfully fetched a single category from the table..!","Television",category.getName());
-	}*/
-	/*@Test
+	}
+	@Test
 	public void testUpdateCategory()
 	{
 		category = categoryDAO.get(3);
 		category.setName("TV");
 		assertEquals("Successfully updated a single category from the table..!",true,categoryDAO.update(category));
-	}*/
-	/*@Test
+	}
+	@Test
 	public void testDeleteCategory()
 	{
 		category = categoryDAO.get(3);
 		category.setName("TV");
 		assertEquals("Successfully Deleted a single category from the table..!",true,categoryDAO.delete(category));
-	}*/
-	@Test
-	public void testDeleteCategory()
-	{
-		
-		assertEquals("Successfully Fetched categories from the table..!",3,categoryDAO.list().size());
 	}
+	
 	
 }

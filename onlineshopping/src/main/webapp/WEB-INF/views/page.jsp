@@ -6,29 +6,37 @@
 <spring:url var="css" value="/resources/css" />
 <spring:url var="js" value="/resources/js" />
 <spring:url var="images" value="/resources/images" />
-
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
 
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Online Shopping - ${title}</title>
-	<script>window.menu='${title}';</script>
+    <title>ByDesign-${title}</title>
+
+   <script>
+			window.menu='${title}';
+			window.contextRoot='${contextRoot}';
+			
+	</script>
     <!-- Bootstrap core CSS -->
     <link href="${css}/bootstrap.min.css" rel="stylesheet">
-    <link href="${css}/bootstrap-theme-style.css" rel="stylesheet">
-
+   	 <link href="${css}/bootstrap-theme-style.css" rel="stylesheet">
+    <!-- Data Table Theme -->
+   	
     <!-- Custom styles for this template -->
     <link href="${css}/myapp.css" rel="stylesheet">
-
+    
+	 <link href="${css}/dataTables.bootstrap.css" rel="stylesheet">
+    	
   </head>
 
-  <body>
+ <body>
 	<div class="wrapper">
     <!-- Navigation -->
   	<%@include file="shared/navbar.jsp" %>
@@ -58,8 +66,15 @@
 	
     <!-- Bootstrap core JavaScript -->
     <script src="${js}/jquery.js"></script>
-    <script src="${js}/bootstrap.bundle.min.js"></script>
-	<script src="${js}/myapp.js"></script>
+    <script src="${js}/bootstrap.min.js"></script>
+      
+    
+    <!-- Data Table Plugins -->
+   	  <script src="${js}/jquery.dataTables.js"></script>	
+   	  <script src="${js}/dataTables.bootstrap.js"></script>
+       
+    <script src="${js}/myapp.js"></script>
+   
   </div>
   </body>
 

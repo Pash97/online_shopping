@@ -17,7 +17,14 @@ public class CategoryDAOImpl implements CategoryDAO {
 	@Autowired
 	private SessionFactory sessionFactory;
 	
-			
+	/*
+	 * Getting a Single Category based on id
+	 * */
+	@Override
+	public Category get(int id) {
+		
+		return sessionFactory.getCurrentSession().get(Category.class,Integer.valueOf(id));
+	}
 	@Override
 	public List<Category> list() {
 		
@@ -27,17 +34,8 @@ public class CategoryDAOImpl implements CategoryDAO {
 		return query.getResultList();
 		
 	}
-	/*
-	 * Getting a Single Category based on id
-	 * */
-	@Override
-	public Category get(int id) {
-		
-		return sessionFactory.getCurrentSession().get(Category.class,Integer.valueOf(id));
-	}
 
 	@Override
-	
 	public boolean add(Category category) {
 		try{
 			 sessionFactory.getCurrentSession().persist(category);	

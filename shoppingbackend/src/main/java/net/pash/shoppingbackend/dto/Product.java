@@ -7,8 +7,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name="product")
 public class Product {
 
 	@Id
@@ -23,7 +25,7 @@ public class Product {
 	private int	quantity;
 	@Column(name="is_active")
 	private int isActive;
-	@Column(name="category_id ")
+	@Column(name="category_id")
 	private int categoryId;
 	@Column(name ="supplier_id")
 	private int supplierId;

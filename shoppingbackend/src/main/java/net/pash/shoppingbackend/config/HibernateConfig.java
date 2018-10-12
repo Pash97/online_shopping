@@ -52,9 +52,9 @@ public class HibernateConfig {
 	@Bean
 	public HibernateTransactionManager getTranscationManager(SessionFactory sessionFactory)
 	{
-		HibernateTransactionManager transacitonManager = new HibernateTransactionManager();
-		transacitonManager.setSessionFactory(sessionFactory);
-		return transacitonManager;
+		HibernateTransactionManager transacitionManager = new HibernateTransactionManager();
+		transacitionManager.setSessionFactory(sessionFactory);
+		return transacitionManager;
 	}
 	
 }
